@@ -71,6 +71,7 @@ export async function getPage(slug: string): Promise<Page> {
             _createdAt,
             title,
             "slug": slug.current,
+            layout,
             content
         }`,
         { slug }
