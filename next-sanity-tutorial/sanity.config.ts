@@ -2,6 +2,7 @@ import { defineConfig } from "sanity";
 import { structureTool } from 'sanity/structure';
 import project from "./sanity/schemas/project-schema";
 import schemas from "./sanity/schemas";
+// import {media} from 'sanity-plugin-media';
 
 const config = defineConfig({
     projectId: 'u26jeold',

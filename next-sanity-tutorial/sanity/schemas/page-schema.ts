@@ -17,19 +17,19 @@ const page = {
                 maxLength: 96,
             }
         },
-        {
-            name: 'layout',
-            type: 'string',
-            title: 'Layout',
-            options: {
-              list: [
-                { title: 'Center Left', value: 'center-left' },
-                { title: 'Center Center', value: 'center-center' },
-                { title: 'Center Right', value: 'center-right' }
-              ],
-              layout: 'dropdown'
-            }
-          },
+        // {
+        //     name: 'layout',
+        //     type: 'string',
+        //     title: 'Layout',
+        //     options: {
+        //       list: [
+        //         { title: 'Center Left', value: 'center-left' },
+        //         { title: 'Center Center', value: 'center-center' },
+        //         { title: 'Center Right', value: 'center-right' }
+        //       ],
+        //       layout: 'dropdown'
+        //     }
+        //   },
         {
             name: 'content',
             title: 'Content',

@@ -38,6 +38,15 @@ const project = {
             type: 'array',
             of: [{ type: "block" }],
         },
+        {
+            name: 'images',
+            title: 'Images',
+            type: 'array',
+            of: [{type: "image"}],
+            options: {
+                layout: 'grid'
+              }
+        }
     ],
 };
 
