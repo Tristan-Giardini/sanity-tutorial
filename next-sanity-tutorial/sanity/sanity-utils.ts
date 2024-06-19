@@ -77,3 +77,28 @@ export async function getPage(slug: string): Promise<Page> {
         { slug }
     )
 }
+
+export async function getAllContent(): Promise<(Project | Page)[]> {
+    return createClient(clientConfig).fetch(
+        groq`*[_type in ["project", "page"]]{
+            _type,
+            _id,
+            _createdAt,
+            "slug": slug.current,
+            title,
+            content,
+            // Fields specific to 'project'
+            ...select(
+                _type == "project" => {
+                    name,
+                    "image": image.asset->url,
+                    url,
+                    images
+                },
+                _type == "page" => {
+                    // Add any additional fields specific to 'page' if needed
+                }
+            )
+        }`
+    );
+}

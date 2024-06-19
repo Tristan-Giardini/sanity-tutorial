@@ -1,5 +1,6 @@
 import { getPage } from "@/sanity/sanity-utils"
 import { PortableText } from "next-sanity"
+import { getAllContent } from "@/sanity/sanity-utils"
 
 type Props = {
     params: { slug: string }
@@ -7,8 +8,13 @@ type Props = {
 
 export default async function Page({ params }: Props) {
     const page = await getPage(params.slug)
+    const content = await getAllContent();
+    const pageContent = content.find(item => item.slug === params.slug);
 
-    console.log(page)
+    console.log(pageContent)
+    
+
+    console.log(page.content)
 
     return (
         <div>
